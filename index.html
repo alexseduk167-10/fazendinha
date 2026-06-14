@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fazenda Medieval</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+canvas {
+    display: block;
+}
+
+#mensagem {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(56, 53, 53);
+    color: white;
+    padding: 10px;
+    display: none;
+    font-family: Arial;
+    z-index: 9999;
+}
+
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="game"></canvas>
+
+<div id="hud">
+    <div class="painel">
+        <h2>Fazenda</h2>
+        <p>💰 Ouro: <span id="gold">100</span></p>
+        <p>🌱 Trigo: <span id="wheatSeeds">5</span></p>
+        <p>🥕 Cenoura: <span id="carrotSeeds">0</span></p>
+        <p>🌽 Milho: <span id="cornSeeds">0</span></p>
+        <p>📦 Colheitas: <span id="crops">0</span></p>
+        <p>📅 Dia: <span id="day">1</span></p>
+        <p>⏰ Hora: <span id="time">06:00</span></p>
+        <p>🪵 Madeira: <span id="wood">0</span></p>
+        <p>🪨 Pedra: <span id="stone">0</span></p>
+        <p>🐔 Galinhas: <span id="chickens">0</span></p>
+        <p>🐄 Vacas: <span id="cows">0</span></p>
+    </div>
+
+    <div class="painel controles">
+        <h3>Controles</h3>
+       <p>WASD = Andar</p>
+       <p>1 = Selecionar trigo</p>
+       <p>2 = Selecionar cenoura</p>
+       <p>3 = Selecionar milho</p>
+       <p>ESPAÇO = Plantar</p>
+       <p>F = Colher</p>
+       <p>E = Comprar sementes</p>
+       <p>R = Cortar árvore</p>
+       <p>T = Minerar pedra</p>
+       <p>B = Construir celeiro</p>
+       <p>G = Comprar galinha</p>
+       <p>V = Comprar vaca</p>
+    </div>
+</div>
+
+<div id="mensagem"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
